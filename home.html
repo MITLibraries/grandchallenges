@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
 <script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-1760176-37", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", ["http:\/\/grandchallenges.mit.edu","live-grandchallengessummit.pantheonsite.io"]);ga("set", "anonymizeIp", true);ga("set", "page", location.pathname + location.search + location.hash);ga("send", "pageview");</script>
-<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
-<meta name="MobileOptimized" content="width" />
-<meta name="HandheldFriendly" content="true" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="shortcut icon" href="/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="canonical" href="/node/6" />
-<link rel="shortlink" href="/node/6" />
-<link rel="revision" href="/node/6" />
+    <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="canonical" href="/node/6" />
+    <link rel="shortlink" href="/node/6" />
+    <link rel="revision" href="/node/6" />
 
     <title>The Grand Challenges Summit | Grand Challenges Summit</title>
     <link rel="stylesheet" href="/sites/default/files/css/css_e-3v_WMOEuntSn5iCUIQ0nW8PEoH_gBFNOPHfJ9idY8.css?pgswzu" media="all" />
-<link rel="stylesheet" href="/sites/default/files/css/css_SLqc8S1tLliLty9ApfaEGr4bMgqtI3VFGKu0TB13T8I.css?pgswzu" media="all" />
+    <link rel="stylesheet" href="/sites/default/files/css/css_SLqc8S1tLliLty9ApfaEGr4bMgqtI3VFGKu0TB13T8I.css?pgswzu" media="all" />
 
     
 <!--[if lte IE 8]>
@@ -26,407 +26,302 @@
     <a href="#main-content" class="visually-hidden focusable skip-link">
       Skip to main content
     </a>
-    
-      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
-    
-          <header class="navbar navbar-inverse navbar-fixed-top" id="navbar" role="banner">
-              <div class="container">
-            <div class="navbar-header">
-          <div class="region region-navigation">
-          <a class="logo navbar-btn pull-left" href="/" title="Home" rel="home">
-      <img src="/sites/all/themes/gcs_bootstrap/logo.svg" alt="Home" />
-    </a>
-        <a class="name navbar-brand" href="/" title="Home" rel="home">Grand Challenges Summit</a>
-    
-  </div>
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
 
-                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-              </div>
-
-                    <div id="navbar-collapse" class="navbar-collapse collapse">
+      <header class="navbar navbar-inverse navbar-fixed-top" id="navbar" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+            <div class="region region-navigation">
+              <a class="logo navbar-btn pull-left" href="/" title="Home" rel="home">
+                <img src="/sites/all/themes/gcs_bootstrap/logo.svg" alt="Home" />
+              </a>
+              <a class="name navbar-brand" href="/" title="Home" rel="home">Grand Challenges Summit</a>
+            </div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar-collapse" class="navbar-collapse collapse">
             <div class="region region-navigation-collapsible">
-    <nav role="navigation" aria-labelledby="block-gcs-bootstrap-main-menu-menu" id="block-gcs-bootstrap-main-menu">
-            <h2 class="sr-only" id="block-gcs-bootstrap-main-menu-menu">Main navigation</h2>
-
-      
-      <ul class="menu menu--main nav navbar-nav">
-                        <li>
-        <a href="#about" data-drupal-link-system-path="&lt;front&gt;" class="is-active">About</a>
-                  </li>
-                        <li>
-        <a href="#keynotes" data-drupal-link-system-path="&lt;front&gt;" class="is-active">Participating</a>
-                  </li>
-                        <li>
-        <a href="#attending" data-drupal-link-system-path="&lt;front&gt;" class="is-active">Keynotes</a>
-                  </li>
-                        <li>
-        <a href="#committee" data-drupal-link-system-path="&lt;front&gt;" class="is-active">Program Committee</a>
-                  </li>
-                        <li>
-        <a href="#updates" data-drupal-link-system-path="&lt;front&gt;" class="is-active">Updates</a>
-                  </li>
-        </ul>
-  
-
-  </nav>
-<section id="block-mitlogo" class="block block-block-content block-block-contentc3242076-6352-4bad-bd56-edfd023207d6 clearfix gcs-section">
-  
-    
-
-      
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><a href="https://web.mit.edu" style="margin-top: 8px;"><svg class="logo-mit" enable-background="new 0 0 54 28" height="40" style="fill: #b9b7b6; float: right; margin-top: 8px;" version="1.1" viewbox="0 0 54 28" width="78" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0"><rect class="color" height="19.1" style="fill: white;" width="5.8" x="28.9" y="8.9"></rect><rect height="28" width="5.8"></rect><rect height="18.8" width="5.8" x="9.6"></rect><rect height="28" width="5.8" x="19.3"></rect><rect height="19.1" width="5.8" x="38.5" y="8.9"></rect><rect height="5.6" width="15.2" x="38.8"></rect><rect height="5.6" width="5.8" x="28.9"></rect></svg></a></p>
-</div>
-      
-  </section>
-
-
-  </div>
-
+              <nav role="navigation" aria-labelledby="block-gcs-bootstrap-main-menu-menu" id="block-gcs-bootstrap-main-menu">
+                <h2 class="sr-only" id="block-gcs-bootstrap-main-menu-menu">Main navigation</h2>
+                <ul class="menu menu--main nav navbar-nav">
+                  <li><a href="#about" data-drupal-link-system-path="&lt;front&gt;" class="is-active">About</a></li>
+                  <li><a href="#keynotes" data-drupal-link-system-path="&lt;front&gt;" class="is-active">Participating</a></li>
+                  <li><a href="#attending" data-drupal-link-system-path="&lt;front&gt;" class="is-active">Keynotes</a></li>
+                  <li><a href="#committee" data-drupal-link-system-path="&lt;front&gt;" class="is-active">Program Committee</a></li>
+                  <li><a href="#updates" data-drupal-link-system-path="&lt;front&gt;" class="is-active">Updates</a></li>
+                </ul>
+              </nav>
+              <section id="block-mitlogo" class="block block-block-content block-block-contentc3242076-6352-4bad-bd56-edfd023207d6 clearfix gcs-section">
+                <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><a href="https://web.mit.edu" style="margin-top: 8px;"><svg class="logo-mit" enable-background="new 0 0 54 28" height="40" style="fill: #b9b7b6; float: right; margin-top: 8px;" version="1.1" viewbox="0 0 54 28" width="78" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0"><rect class="color" height="19.1" style="fill: white;" width="5.8" x="28.9" y="8.9"></rect><rect height="28" width="5.8"></rect><rect height="18.8" width="5.8" x="9.6"></rect><rect height="28" width="5.8" x="19.3"></rect><rect height="19.1" width="5.8" x="38.5" y="8.9"></rect><rect height="5.6" width="15.2" x="38.8"></rect><rect height="5.6" width="5.8" x="28.9"></rect></svg></a></p></div>
+              </section>
+            </div>
+          </div>
         </div>
-                    </div>
-          </header>
-  
-  <div id="home" role="main" class="main-container">
+      </header>
 
-                  <div class="panel-connect">
+      <div id="home" role="main" class="main-container">
+        <div class="panel-connect">
+          <div class="container">
+            <div class="row">
+              <div class="region region-connect">
+                <section id="block-followus" class="block block-block-content block-block-content5a85cb9e-8d11-409b-a075-17776402216e clearfix gcs-section">
+                  <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                    <div class="col-xs-2"><h3 class="hidden-sm hidden-xs">Follow us</h3></div>
+                    <div><a class="col-xs-2" href="https://twitter.com/mitlibraries"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on Twitter</span></a></div>
+                    <div><a class="col-xs-2" href="https://libraries.mit.edu/facebook"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on Facebook</span></a></div>
+                    <div><a class="col-xs-2" href="https://instagram.com/mitlibraries/"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on Instagram</span></a></div>
+                    <div><a class="col-xs-2" href="https://www.youtube.com/user/mitlibraries"><i class="fab fa-youtube fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on YouTube</span></a></div>
+                    <div><a class="col-xs-2" href="#subscribe" title="Summit Email Newsletter"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Summit Email Newsletter</span></a></div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container js-quickedit-main-content">
+          <div class="row">
+            <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+              </div>
+            </div>
+            <section class="col-sm-12">
+              <a id="main-content"></a>
+              <div class="region region-content">
+                <article data-history-node-id="6" class="node node--type-page node--view-mode-full clearfix">
+                  <div>
+                    <div class="layout layout--onecol">
+                      <div  class="layout__region layout__region--content">
+                        <div class="block-region-content">
+                          <section class="block block-ctools-block block-entity-fieldnodebody clearfix gcs-section">
+                            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                              <div class="col-sm-6" style="display: flex; align-items: center; min-height: 100%; min-height: 500px;">
+                                <div>
+                                  <!-- Start editing here -->
+                                  <h1>Grand Challenges Summit</h1>
+                                  <!-- End editing here editing here -->
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div id="about" class="gcs-panel panel-about panel-dark">
         <div class="container">
           <div class="row">
-              <div class="region region-connect">
-    <section id="block-followus" class="block block-block-content block-block-content5a85cb9e-8d11-409b-a075-17776402216e clearfix gcs-section">
-  
-    
-
-      
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="col-xs-2">
-<h3 class="hidden-sm hidden-xs">Follow us</h3>
-</div>
-
-<div><a class="col-xs-2" href="https://twitter.com/mitlibraries"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on Twitter</span></a></div>
-
-<div><a class="col-xs-2" href="https://libraries.mit.edu/facebook"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on Facebook</span></a></div>
-
-<div><a class="col-xs-2" href="https://instagram.com/mitlibraries/"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on Instagram</span></a></div>
-
-<div><a class="col-xs-2" href="https://www.youtube.com/user/mitlibraries"><i class="fab fa-youtube fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on YouTube</span></a></div>
-
-<div><a class="col-xs-2" href="#subscribe" title="Summit Email Newsletter"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Summit Email Newsletter</span></a></div>
-</div>
-      
-  </section>
-
-
-  </div>
-
+            <div class="region region-about">
+              <section class="views-element-container block block-views block-views-blockpage-as-block-block-1 clearfix gcs-section" id="block-views-block-page-as-block-block-1">
+                <h2 class="block-title col-sm-12">About the Summit</h2>
+                <div class="form-group">
+                  <div class="view view-page-as-block view-id-page_as_block view-display-id-block_1 js-view-dom-id-4112164109655dc69b5cb247ed722b14ca1bffa2ecd7dcbb96a3f0c84326f98c">
+                    <div class="view-content">
+                      <div class="views-row">
+                        <div class="views-field views-field-body">
+                          <div class="field-content">
+                            <!-- Begin edits here -->
+                            <p>#mitgrandchallenges</p>
+                            <p> </p>
+                            <p>MIT hosted a working summit on the Grand Challenges in Information Science and Scholarly Communication on March 19-23, 2018. Inviting experts from across disciplines and sectors, the summit aimed to identify critical problems in information science that are solvable within 10 years and which have broad implications across the scholarly community.</p>
+                            <p> </p>
+                            <p>Three consecutive 1.5-day workshops will produce draft research agendas in the areas of:</p>
+                            <ul>
+                              <li>Scholarly discovery</li>
+                              <li>Digital curation and preservation</li>
+                              <li>Open scholarship</li>
+                            </ul>
+                            <p>Attendance at the workshops was by invitation only. The March 19 opening keynote address was open to the MIT community, and all three keynote addresses were live-streamed and available for viewing below.</p>
+                            <!-- End edits here -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </div>
-        
-    <div class="container js-quickedit-main-content">
-      <div class="row">
 
-                                      <div class="col-sm-12" role="heading">
-                <div class="region region-header">
-    
-
-  </div>
-
+      <div id="keynotes" class="gcs-panel panel-keynote panel-light">
+        <div class="container">
+          <div class="row">
+            <div class="region region-keynote">
+              <section class="views-element-container block block-views block-views-blockpage-as-block-block-5 clearfix gcs-section" id="block-participating">
+                <h2 class="block-title col-sm-12">Participating</h2>
+                <div class="form-group">
+                  <div class="view view-page-as-block view-id-page_as_block view-display-id-block_5 js-view-dom-id-7355c52aecd7165c21deb78688af2ff5f06b85cd1498dd0b7c6aeed241224c09">
+                    <div class="view-content">
+                      <div class="views-row">
+                        <div class="views-field views-field-body">
+                          <div class="field-content">
+                            <div class="col-xs-12">
+                              <p>We have been openly sharing background readings, survey results, detailed schedules, and information shared by the summit participants through the PubPub platform (hosted by the MIT MediaLab). Interested members of the community can follow along at:</p>
+                              <p><a href="https://grandchallenges.pubpub.org/">https://grandchallenges.pubpub.org/</a></p>
+                            </div>
+                            <h3 class="col-xs-12">Draft report released</h3>
+                            <p class="col-xs-2"><a href="https://grandchallenges.pubpub.org/pub/publicdraft"><img alt="The cover of the GCS report" data-entity-type="file" data-entity-uuid="ccede913-a7e8-45f4-bb54-e720cb8d17b7" src="/sites/default/files/inline-images/gcs_report_cover_0.png" style="-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);width: 100%;" /></a></p>
+                            <p class="col-xs-10">The Grand Challenges Summit has produced a draft white paper, <a href="https://grandchallenges.pubpub.org/pub/publicdraft">A Grand Challenges-Based Research Agenda for Scholarly Communication and Information Science</a>. The paper is available on PubPub and open for comment through October 31.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
-                  
-                <section class="col-sm-12">
-
-                    
-                                              
-                      
-                                <a id="main-content"></a>
-              <div class="region region-content">
-      <article data-history-node-id="6" class="node node--type-page node--view-mode-full clearfix">
-  
-    
-
-  <div>
-      <div class="layout layout--onecol">
-    <div  class="layout__region layout__region--content">
-      <div class="block-region-content"><section class="block block-ctools-block block-entity-fieldnodebody clearfix gcs-section">
-  
-    
-
-      
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="col-sm-6" style="display: flex; align-items: center; min-height: 100%; min-height: 500px;">
-<div><!-- Start editing here -->
-<h1>Grand Challenges Summit</h1>
-<!-- End editing here editing here --></div>
-</div>
-</div>
-      
-  </section>
-
-</div>
-    </div>
-  </div>
-
-  </div>
-</article>
-
-
-  </div>
-
-                  </section>
-
-      </div>
-    </div>
-  </div>
-
-  <div id="about" class="gcs-panel panel-about panel-dark">
-    <div class="container">
-      <div class="row">
-          <div class="region region-about">
-    <section class="views-element-container block block-views block-views-blockpage-as-block-block-1 clearfix gcs-section" id="block-views-block-page-as-block-block-1">
-  
-      <h2 class="block-title col-sm-12">About the Summit</h2>
-    
-
-      <div class="form-group"><div class="view view-page-as-block view-id-page_as_block view-display-id-block_1 js-view-dom-id-4112164109655dc69b5cb247ed722b14ca1bffa2ecd7dcbb96a3f0c84326f98c">
-  
-    
-      
-      <div class="view-content">
-          <div class="views-row"><div class="views-field views-field-body"><div class="field-content"><p><!-- Begin edits here --> #mitgrandchallenges</p>
-
-<p> </p>
-
-<p>MIT hosted a working summit on the Grand Challenges in Information Science and Scholarly Communication on March 19-23, 2018. Inviting experts from across disciplines and sectors, the summit aimed to identify critical problems in information science that are solvable within 10 years and which have broad implications across the scholarly community.</p>
-
-<p> </p>
-
-<p>Three consecutive 1.5-day workshops will produce draft research agendas in the areas of:</p>
-
-<ul><li>Scholarly discovery</li>
-	<li>Digital curation and preservation</li>
-	<li>Open scholarship</li>
-</ul><p>Attendance at the workshops was by invitation only. The March 19 opening keynote address was open to the MIT community, and all three keynote addresses were live-streamed and available for viewing below.</p>
-<!-- End edits here --></div></div></div>
-
-    </div>
-  
           </div>
-</div>
-
-  </section>
-
-
-  </div>
-
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div id="keynotes" class="gcs-panel panel-keynote panel-light">
-    <div class="container">
-      <div class="row">
-          <div class="region region-keynote">
-    <section class="views-element-container block block-views block-views-blockpage-as-block-block-5 clearfix gcs-section" id="block-participating">
-  
-      <h2 class="block-title col-sm-12">Participating</h2>
-    
-
-      <div class="form-group"><div class="view view-page-as-block view-id-page_as_block view-display-id-block_5 js-view-dom-id-7355c52aecd7165c21deb78688af2ff5f06b85cd1498dd0b7c6aeed241224c09">
-  
-    
-      
-      <div class="view-content">
-          <div class="views-row"><div class="views-field views-field-body"><div class="field-content"><div class="col-xs-12">
-<p>We have been openly sharing background readings, survey results, detailed schedules, and information shared by the summit participants through the PubPub platform (hosted by the MIT MediaLab). Interested members of the community can follow along at:</p>
-
-<p><a href="https://grandchallenges.pubpub.org/">https://grandchallenges.pubpub.org/</a></p>
-</div>
-
-<h3 class="col-xs-12">Draft report released</h3>
-
-<p class="col-xs-2"><a href="https://grandchallenges.pubpub.org/pub/publicdraft"><img alt="The cover of the GCS report" data-entity-type="file" data-entity-uuid="ccede913-a7e8-45f4-bb54-e720cb8d17b7" src="/sites/default/files/inline-images/gcs_report_cover_0.png" style="-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);width: 100%;" /></a></p>
-
-<p class="col-xs-10">The Grand Challenges Summit has produced a draft white paper, <a href="https://grandchallenges.pubpub.org/pub/publicdraft">A Grand Challenges-Based Research Agenda for Scholarly Communication and Information Science</a>. The paper is available on PubPub and open for comment through October 31.</p>
-</div></div></div>
-
-    </div>
-  
+      <div id="attending" class="gcs-panel panel-attending panel-dark">
+        <div class="container">
+          <div class="row">
+            <div class="region region-attending">
+              <section class="views-element-container block block-views block-views-blockfeatured-speakers-block-1 clearfix gcs-section" id="block-views-block-featured-speakers-block-1-2">
+                <h2 class="block-title col-sm-12">Keynote Speakers</h2>
+                <div class="form-group">
+                  <div class="view view-featured-speakers view-id-featured_speakers view-display-id-block_1 js-view-dom-id-0ec0b0235e901498e12815f3bc2c778227316ca384eae4cf12bf4a3c3f07153a">
+                    <div class="view-content">
+                      <div class="col-sm-4">
+                        <p class="views-field views-field-field-headshot">
+                          <div class="field-content"><img src="/sites/default/files/2018-01/ito.png" width="467" height="467" alt="headshot of Joi Ito" typeof="foaf:Image" class="img-responsive" /></div>
+                        </p>
+                        <p class="views-field views-field-field-keynote">
+                          <div class="field-content"><div class="embed-responsive embed-responsive-16by9"><iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/u5F__Jqx3Nk?rel=0&amp;showinfo=0" width="560"></iframe></div></div>
+                        </p>
+                        <h3>Joi Ito</h3>
+                        <p class="views-field views-field-body short-bio">
+                          <p>Joi Ito is the director of the MIT Media Lab, Professor of the Practice at MIT and the author, with Jeff Howe, of <em>Whiplash: How to Survive Our Faster Future</em> (Grand Central Publishing, 2016).</p>
+                        </p>
+                        <p class="full-bio-link"><a href="https://joi.ito.com/bio.html">More about Joi Ito</a></p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="views-field views-field-field-headshot">
+                          <div class="field-content"><img src="/sites/default/files/2018-01/sengupta.png" width="720" height="720" alt="headshot of Anasuya Sengupta" typeof="foaf:Image" class="img-responsive" /></div>
+                        </p>
+                        <p class="views-field views-field-field-keynote">
+                          <div class="field-content"><div class="embed-responsive embed-responsive-16by9"><iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/bshxssV_3Pc?rel=0&amp;showinfo=0" width="560"></iframe></div></div>
+                        </p>
+                        <h3>Anasuya Sengupta</h3>
+                        <p class="views-field views-field-body short-bio">
+                          <p>Anasuya Sengupta is Co-Director of  <a href="http://whoseknowledge.org/">Whose Knowledge?</a>  She has led initiatives in India and the USA, across the global South, and internationally for over 20 years to amplify marginalised voices in virtual and physical worlds.</p>
+                        </p>
+                        <p class="full-bio-link"><a href="http://sanmathi.org/anasuya/">More about Anasuya Sengupta</a></p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="views-field views-field-field-headshot">
+                          <div class="field-content"><img src="/sites/default/files/2018-03/20160805SM002_WEB_crop.png" width="720" height="720" alt="Kate Zwaard" typeof="foaf:Image" class="img-responsive" /></div>
+                        </p>
+                        <p class="views-field views-field-field-keynote">
+                          <div class="field-content"><div class="embed-responsive embed-responsive-16by9"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PyCWFZ1gtb0?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div></div>
+                        </p>
+                        <h3>Kate Zwaard</h3>
+                        <p class="views-field views-field-body short-bio">
+                          <p>Kate Zwaard is the chief of <a href="http://digitalpreservation.gov/ndi/index.html?loclr=blogsig">National Digital Initiatives</a> at the Library of Congress, where she leads a new group focused on digital innovation and expanding the use of the digital collections. She previously managed the Digital Repository Development team, contributing leadership, code and a passion for the mission of the agency. Under her technical direction, the Library of Congress ingested three petabytes (equivalent to 3 million gigabytes) of digital collections, including web archives, the first born-digital manuscript collections, 10 million Chronicling America newspaper pages and three-fourths of a trillion tweets.</p>
+                        </p>
+                        <p class="full-bio-link"><a href="https://blogs.loc.gov/thesignal/author/kzwa/">More about Kate Zwaard</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
-</div>
-
-  </section>
-
-
-  </div>
-
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div id="attending" class="gcs-panel panel-attending panel-dark">
-    <div class="container">
-      <div class="row">
-          <div class="region region-attending">
-    <section class="views-element-container block block-views block-views-blockfeatured-speakers-block-1 clearfix gcs-section" id="block-views-block-featured-speakers-block-1-2">
-  
-      <h2 class="block-title col-sm-12">Keynote Speakers</h2>
-    
-
-      <div class="form-group"><div class="view view-featured-speakers view-id-featured_speakers view-display-id-block_1 js-view-dom-id-0ec0b0235e901498e12815f3bc2c778227316ca384eae4cf12bf4a3c3f07153a">
-  
-    
-      
-      <div class="view-content">
-          <div class="col-sm-4"><p class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-01/ito.png" width="467" height="467" alt="headshot of Joi Ito" typeof="foaf:Image" class="img-responsive" />
-
-</div></p><p class="views-field views-field-field-keynote"><div class="field-content"><div class="embed-responsive embed-responsive-16by9"><iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/u5F__Jqx3Nk?rel=0&amp;showinfo=0" width="560"></iframe></div>
-</div></p><h3>Joi Ito</h3><p class="views-field views-field-body short-bio"><p>Joi Ito is the director of the MIT Media Lab, Professor of the Practice at MIT and the author, with Jeff Howe, of <em>Whiplash: How to Survive Our Faster Future</em> (Grand Central Publishing, 2016).</p></p><p class="full-bio-link"><a href="https://joi.ito.com/bio.html">More about Joi Ito</a></p></div>
-    <div class="col-sm-4"><p class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-01/sengupta.png" width="720" height="720" alt="headshot of Anasuya Sengupta" typeof="foaf:Image" class="img-responsive" />
-
-</div></p><p class="views-field views-field-field-keynote"><div class="field-content"><div class="embed-responsive embed-responsive-16by9"><iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/bshxssV_3Pc?rel=0&amp;showinfo=0" width="560"></iframe></div>
-</div></p><h3>Anasuya Sengupta</h3><p class="views-field views-field-body short-bio"><p>Anasuya Sengupta is Co-Director of  <a href="http://whoseknowledge.org/">Whose Knowledge?</a>  She has led initiatives in India and the USA, across the global South, and internationally for over 20 years to amplify marginalised voices in virtual and physical worlds.</p></p><p class="full-bio-link"><a href="http://sanmathi.org/anasuya/">More about Anasuya Sengupta</a></p></div>
-    <div class="col-sm-4"><p class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-03/20160805SM002_WEB_crop.png" width="720" height="720" alt="Kate Zwaard" typeof="foaf:Image" class="img-responsive" />
-
-</div></p><p class="views-field views-field-field-keynote"><div class="field-content"><div class="embed-responsive embed-responsive-16by9"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PyCWFZ1gtb0?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
-</div></p><h3>Kate Zwaard</h3><p class="views-field views-field-body short-bio"><p>Kate Zwaard is the chief of <a href="http://digitalpreservation.gov/ndi/index.html?loclr=blogsig">National Digital Initiatives</a> at the Library of Congress, where she leads a new group focused on digital innovation and expanding the use of the digital collections. She previously managed the Digital Repository Development team, contributing leadership, code and a passion for the mission of the agency. Under her technical direction, the Library of Congress ingested three petabytes (equivalent to 3 million gigabytes) of digital collections, including web archives, the first born-digital manuscript collections, 10 million Chronicling America newspaper pages and three-fourths of a trillion tweets.</p></p><p class="full-bio-link"><a href="https://blogs.loc.gov/thesignal/author/kzwa/">More about Kate Zwaard</a></p></div>
-
-    </div>
-  
+      <div id="committee" class="gcs-panel panel-committee panel-light">
+        <div class="container">
+          <div class="row">
+            <div class="region region-committee">
+              <section class="views-element-container block block-views block-views-blockprogram-committee-block-1 clearfix gcs-section" id="block-views-block-program-committee-block-1">
+                <h2 class="block-title col-sm-12">Program Committee</h2>
+                  <div class="form-group">
+                    <div class="view view-program-committee view-id-program_committee view-display-id-block_1 js-view-dom-id-1c7085611ea3b6f1ae232a79ff86a3a47299025590c66beea6f432b3454670ac">
+                      <div class="view-header">
+                        <p class="col-xs-12" style="padding-bottom: 15px;">The Program Committee is providing intellectual guidance throughout the process of developing and hosting the Grand Challenges Summit. Specifically, the committee has advised on the selection of participants, identified foundational publications to be incorporated into the briefs, and written position papers. We anticipate committee members will participate in workshop discussions and in commenting on and identifying reviewers for versions of the resulting report.</p>
+                      </div>
+                      <div class="view-content">
+                        <div class="col-sm-3">
+                          <div class="views-field views-field-field-headshot"><div class="field-content"><img src="/sites/default/files/2018-01/altman.png" width="494" height="495" alt="headshot of Micah Altman" typeof="foaf:Image" class="img-responsive" /></div></div>
+                          <h3>Micah Altman</h3>
+                          <div class="views-field views-field-body"><div class="field-content"><p>Micah Altman is Director of Research and Head/Scientist, Program on Information Science for the MIT Libraries, at the Massachusetts Institute of Technology.</p></div></div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="views-field views-field-field-headshot"><div class="field-content"><img src="/sites/default/files/2018-01/borgman.png" width="525" height="525" alt="headshot of Chris Borgman" typeof="foaf:Image" class="img-responsive" /></div></div>
+                          <h3>Christine Borgman</h3>
+                          <div class="views-field views-field-body"><div class="field-content"><p>Christine L. Borgman is Distinguished Professor and Presidential Chair in Information Studies at UCLA.</p></div></div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="views-field views-field-field-headshot"><div class="field-content"><img src="/sites/default/files/2018-01/bourg.png" width="525" height="525" alt="headshot of Chris Bourg" typeof="foaf:Image" class="img-responsive" /></div></div>
+                          <h3>Chris Bourg</h3>
+                          <div class="views-field views-field-body"><div class="field-content"><p>Chris Bourg is the Director of Libraries at Massachusetts Institute of Technology (MIT), where she also has oversight of the MIT Press.</p></div></div>
+                        </div>
+                        <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-01/choudhury_alt1.png" width="274" height="274" alt="headshot of G. Sayeed Choudhury" typeof="foaf:Image" class="img-responsive" /></div></div><h3>G. Sayeed Choudhury</h3><div class="views-field views-field-body"><div class="field-content"><p>G. Sayeed Choudhury is the Associate Dean for Research Data Management and Hodson Director of the Digital Research and Curation Center at the Sheridan Libraries of Johns Hopkins University. He is a President Obama appointee to the National Museum and Library Services Board.</p></div></div></div>
+                        <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-01/henry.png" width="525" height="525" alt="headshot of Charles (Chuck) Henry" typeof="foaf:Image" class="img-responsive" /></div></div><h3>Charles (Chuck) Henry</h3><div class="views-field views-field-body"><div class="field-content"><p>Charles J. Henry is President of the Council on Library and Information Resources (CLIR).</p></div></div></div>
+                        <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-01/rumsey.png" width="525" height="525" alt="headshot of Abby Smith Rumsey" typeof="foaf:Image" class="img-responsive" /></div></div><h3>Abby Smith Rumsey</h3><div class="views-field views-field-body"><div class="field-content"><p>Abby Smith Rumsey is a writer and historian of ideas focusing on the creation, preservation, and use of the cultural record in all media.</p></div></div></div>
+                        <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-01/zuckerman.png" width="525" height="525" alt="headshot of Ethan Zuckerman" typeof="foaf:Image" class="img-responsive" /></div></div><h3>Ethan Zuckerman</h3><div class="views-field views-field-body"><div class="field-content"><p>Ethan Zuckerman is director of the Center for Civic Media at MIT, and Associate Professor of the Practice at MIT's Media Lab.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+              </section>
+            </div>
           </div>
-</div>
-
-  </section>
-
-
-  </div>
-
+        </div>
       </div>
-    </div>
-  </div>
-
-
-
-  <div id="committee" class="gcs-panel panel-committee panel-light">
-    <div class="container">
-      <div class="row">
-          <div class="region region-committee">
-    <section class="views-element-container block block-views block-views-blockprogram-committee-block-1 clearfix gcs-section" id="block-views-block-program-committee-block-1">
-  
-      <h2 class="block-title col-sm-12">Program Committee</h2>
-    
-
-      <div class="form-group"><div class="view view-program-committee view-id-program_committee view-display-id-block_1 js-view-dom-id-1c7085611ea3b6f1ae232a79ff86a3a47299025590c66beea6f432b3454670ac">
-  
-    
-      <div class="view-header">
-      <p class="col-xs-12" style="padding-bottom: 15px;">The Program Committee is providing intellectual guidance throughout the process of developing and hosting the Grand Challenges Summit. Specifically, the committee has advised on the selection of participants, identified foundational publications to be incorporated into the briefs, and written position papers. We anticipate committee members will participate in workshop discussions and in commenting on and identifying reviewers for versions of the resulting report.</p>
-    </div>
-      
-      <div class="view-content">
-          <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-01/altman.png" width="494" height="495" alt="headshot of Micah Altman" typeof="foaf:Image" class="img-responsive" />
-
-</div></div><h3>Micah Altman</h3><div class="views-field views-field-body"><div class="field-content"><p>Micah Altman is Director of Research and Head/Scientist, Program on Information Science for the MIT Libraries, at the Massachusetts Institute of Technology.</p></div></div></div>
-    <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-01/borgman.png" width="525" height="525" alt="headshot of Chris Borgman" typeof="foaf:Image" class="img-responsive" />
-
-</div></div><h3>Christine Borgman</h3><div class="views-field views-field-body"><div class="field-content"><p>Christine L. Borgman is Distinguished Professor and Presidential Chair in Information Studies at UCLA.</p></div></div></div>
-    <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-01/bourg.png" width="525" height="525" alt="headshot of Chris Bourg" typeof="foaf:Image" class="img-responsive" />
-
-</div></div><h3>Chris Bourg</h3><div class="views-field views-field-body"><div class="field-content"><p>Chris Bourg is the Director of Libraries at Massachusetts Institute of Technology (MIT), where she also has oversight of the MIT Press.</p></div></div></div>
-    <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-01/choudhury_alt1.png" width="274" height="274" alt="headshot of G. Sayeed Choudhury" typeof="foaf:Image" class="img-responsive" />
-
-</div></div><h3>G. Sayeed Choudhury</h3><div class="views-field views-field-body"><div class="field-content"><p>G. Sayeed Choudhury is the Associate Dean for Research Data Management and Hodson Director of the Digital Research and Curation Center at the Sheridan Libraries of Johns Hopkins University. He is a President Obama appointee to the National Museum and Library Services Board.</p></div></div></div>
-    <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-01/henry.png" width="525" height="525" alt="headshot of Charles (Chuck) Henry" typeof="foaf:Image" class="img-responsive" />
-
-</div></div><h3>Charles (Chuck) Henry</h3><div class="views-field views-field-body"><div class="field-content"><p>Charles J. Henry is President of the Council on Library and Information Resources (CLIR).</p></div></div></div>
-    <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-01/rumsey.png" width="525" height="525" alt="headshot of Abby Smith Rumsey" typeof="foaf:Image" class="img-responsive" />
-
-</div></div><h3>Abby Smith Rumsey</h3><div class="views-field views-field-body"><div class="field-content"><p>Abby Smith Rumsey is a writer and historian of ideas focusing on the creation, preservation, and use of the cultural record in all media.</p></div></div></div>
-    <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="/sites/default/files/2018-01/zuckerman.png" width="525" height="525" alt="headshot of Ethan Zuckerman" typeof="foaf:Image" class="img-responsive" />
-
-</div></div><h3>Ethan Zuckerman</h3><div class="views-field views-field-body"><div class="field-content"><p>Ethan Zuckerman is director of the Center for Civic Media at MIT, and Associate Professor of the Practice at MIT's Media Lab.</p></div></div></div>
-
-    </div>
-  
-          </div>
-</div>
-
-  </section>
-
-
-  </div>
-
-      </div>
-    </div>
-  </div>
-
 
   <div id="updates" class="gcs-panel panel-updates panel-bg-fixed">
     <div class="gcs-content container">
       <div class="row">
           <div class="region region-updates">
     <section id="block-dynamicupdates" class="block block-block-content block-block-contentef76c2ae-852b-409b-b21a-80a7546e2c3d clearfix gcs-section">
-  
       <h2 class="block-title col-sm-12">Updates</h2>
-    
-
-      
   </section>
-
-
   </div>
-
       </div>
     </div>
   </div>
-
 
   <div id="subscribe" class="gcs-panel panel-subscribe panel-dark">
     <div class="container">
       <div class="row">
           <div class="region region-subscribe">
     <section class="mailchimp-signup-subscribe-form block block-mailchimp-signup block-mailchimp-signup-subscribe-blocksimple-sign-up-block clearfix gcs-section" data-drupal-selector="mailchimp-signup-subscribe-block-simple-sign-up-block-form" id="block-mailchimpsubscriptionformsimplesignupblock">
-  
       <h2 class="block-title col-sm-12">Subscribe</h2>
-    
-
       <form action="/" method="post" id="mailchimp-signup-subscribe-block-simple-sign-up-block-form" accept-charset="UTF-8">
   <div id="mailchimp-newsletter-6a17f97447-mergefields" class="mailchimp-newsletter-mergefields"><div class="form-item js-form-item form-type-email js-form-type-email form-item-mergevars-email js-form-item-mergevars-email form-group">
       <label for="edit-mergevars-email" class="control-label js-form-required form-required">Email Address</label>
-  
-  
   <input data-drupal-selector="edit-mergevars-email" class="form-email required form-control" type="email" id="edit-mergevars-email" name="mergevars[EMAIL]" value="" size="25" maxlength="254" required="required" aria-required="true" />
-
-  
-  
   </div>
 </div><input autocomplete="off" data-drupal-selector="form-n01wsaknqlnjsnuv2gnw-buddhzfsxae5sjhutnam-k" type="hidden" name="form_build_id" value="form-n01wSAkNQlNJSNuv2gnw_budDhzFSXae5SjHUTNaM_k" /><input data-drupal-selector="edit-mailchimp-signup-subscribe-block-simple-sign-up-block-form" type="hidden" name="form_id" value="mailchimp_signup_subscribe_block_simple_sign_up_block_form" /><div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit" class="button js-form-submit form-submit btn-info btn icon-before" type="submit" id="edit-submit" name="op" value="Get Updates"><span class="icon glyphicon glyphicon-ok" aria-hidden="true"></span>
 Get Updates</button></div>
-
 </form>
-
   </section>
-
-
   </div>
-
       </div>
     </div>
   </div>
 
 <footer class="footer" role="contentinfo">
-
             <div class="footer-foundation panel-light">
       <div class="container">
         <div class="row">
             <div class="region region-foundation">
     <section id="block-foundation" class="block block-block-content block-block-contente0663f55-d634-44bb-a7b9-33d66ea975b4 clearfix gcs-section">
-  
-    
-
-      
             <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="col-md-8">
 <h4 style="margin-top: 0;">The Grand Challenges Summit is funded with the generous support<br />
 of The Andrew W. Mellon Foundation.</h4>
@@ -486,12 +381,11 @@ of The Andrew W. Mellon Foundation.</h4>
 
   </div>
 
-    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9021ea6c03/3efe2d8bfc50c0bde9b1a09aa.js");</script>
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/6","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":2,"trackCrossDomains":["http:\/\/grandchallenges.mit.edu","live-grandchallengessummit.pantheonsite.io"],"trackUrlFragments":true},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_keyboard":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"3179fb7df63e8003f90331a423959974491a3faf94344280da260fcaa144f0e3"}}</script>
-<script src="/sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
-<script src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
-<script src="https://use.fontawesome.com/releases/v5.0.1/js/v4-shims.js"></script>
-<script src="/sites/default/files/js/js_24gfdPX-WV8vlo60rwzr19eC7J5adlj4SKfism0ojuI.js"></script>
-
+  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9021ea6c03/3efe2d8bfc50c0bde9b1a09aa.js");</script>
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/6","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":2,"trackCrossDomains":["http:\/\/grandchallenges.mit.edu","live-grandchallengessummit.pantheonsite.io"],"trackUrlFragments":true},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_keyboard":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"3179fb7df63e8003f90331a423959974491a3faf94344280da260fcaa144f0e3"}}</script>
+  <script src="/sites/default/files/js/js_E4Tr-H7Le9ipAqZS8D6MaK3E1BwfV_2_T7-uEptohlE.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.1/js/v4-shims.js"></script>
+  <script src="/sites/default/files/js/js_24gfdPX-WV8vlo60rwzr19eC7J5adlj4SKfism0ojuI.js"></script>
   <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"1815917de0","applicationID":"110379387","transactionName":"ZlBbYkpWWxJQVBFZXl8aeFVMXloPHkcEV1RuVlhVUFI=","queueTime":0,"applicationTime":9,"atts":"ShdYFAJMSBw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
