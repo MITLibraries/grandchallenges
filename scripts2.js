@@ -3777,8 +3777,9 @@ var Drupal = Drupal || {};
       }).appendTo(container);
 
     })
-    .fail(function() {
-      console.log('Failure parsing news item feed');
+    .fail(function( jqxhr, textStatus, error ) {
+      var err = textStatus + ", " + error;
+      console.log( "Request Failed: " + err );
     });
 
 })(window.jQuery);
