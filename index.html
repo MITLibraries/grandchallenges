@@ -1,9 +1,342 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Grand Challenges Summit</title>
-</head>
-<body>
-<h1>This is an experiment</h1>
-</body>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-1760176-37", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", ["http:\/\/grandchallenges.mit.edu","live-grandchallengessummit.pantheonsite.io"]);ga("set", "anonymizeIp", true);ga("set", "page", location.pathname + location.search + location.hash);ga("send", "pageview");</script>
+    <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="canonical" href="/" />
+
+    <title>The Grand Challenges Summit | Grand Challenges Summit</title>
+    <link rel="stylesheet" href="styles1.css?pgswzu" media="all" />
+    <link rel="stylesheet" href="styles2.css?pgswzu" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="ie8.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-frontpage page-node-type-page navbar-is-fixed-top has-glyphicons">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+
+      <header class="navbar navbar-inverse navbar-fixed-top" id="navbar" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+            <div class="region region-navigation">
+              <a class="logo navbar-btn pull-left" href="/" title="Home" rel="home">
+                <img src="logo.svg" alt="Home" />
+              </a>
+              <a class="name navbar-brand" href="/" title="Home" rel="home">Grand Challenges Summit</a>
+            </div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+              <nav role="navigation" aria-labelledby="block-gcs-bootstrap-main-menu-menu" id="block-gcs-bootstrap-main-menu">
+                <h2 class="sr-only" id="block-gcs-bootstrap-main-menu-menu">Main navigation</h2>
+                <ul class="menu menu--main nav navbar-nav">
+                  <li><a href="#about" data-drupal-link-system-path="&lt;front&gt;" class="is-active">About</a></li>
+                  <li><a href="#keynotes" data-drupal-link-system-path="&lt;front&gt;" class="is-active">Participating</a></li>
+                  <li><a href="#attending" data-drupal-link-system-path="&lt;front&gt;" class="is-active">Keynotes</a></li>
+                  <li><a href="#committee" data-drupal-link-system-path="&lt;front&gt;" class="is-active">Program Committee</a></li>
+                  <li><a href="#updates" data-drupal-link-system-path="&lt;front&gt;" class="is-active">Updates</a></li>
+                </ul>
+              </nav>
+              <section id="block-mitlogo" class="block block-block-content block-block-contentc3242076-6352-4bad-bd56-edfd023207d6 clearfix gcs-section">
+                <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><a href="https://web.mit.edu" style="margin-top: 8px;"><svg class="logo-mit" enable-background="new 0 0 54 28" height="40" style="fill: #b9b7b6; float: right; margin-top: 8px;" version="1.1" viewbox="0 0 54 28" width="78" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0"><rect class="color" height="19.1" style="fill: white;" width="5.8" x="28.9" y="8.9"></rect><rect height="28" width="5.8"></rect><rect height="18.8" width="5.8" x="9.6"></rect><rect height="28" width="5.8" x="19.3"></rect><rect height="19.1" width="5.8" x="38.5" y="8.9"></rect><rect height="5.6" width="15.2" x="38.8"></rect><rect height="5.6" width="5.8" x="28.9"></rect></svg></a></p></div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div id="home" role="main" class="main-container">
+        <div class="panel-connect">
+          <div class="container">
+            <div class="row">
+              <div class="region region-connect">
+                <section id="block-followus" class="block block-block-content block-block-content5a85cb9e-8d11-409b-a075-17776402216e clearfix gcs-section">
+                  <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                    <div class="col-xs-2"><h3 class="hidden-sm hidden-xs">Follow us</h3></div>
+                    <div><a class="col-xs-2" href="https://twitter.com/mitlibraries"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on Twitter</span></a></div>
+                    <div><a class="col-xs-2" href="https://libraries.mit.edu/facebook"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on Facebook</span></a></div>
+                    <div><a class="col-xs-2" href="https://instagram.com/mitlibraries/"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on Instagram</span></a></div>
+                    <div><a class="col-xs-2" href="https://www.youtube.com/user/mitlibraries"><i class="fab fa-youtube fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on YouTube</span></a></div>
+                    <div><a class="col-xs-2" href="#subscribe" title="Summit Email Newsletter"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Summit Email Newsletter</span></a></div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container js-quickedit-main-content">
+          <div class="row">
+            <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+              </div>
+            </div>
+            <section class="col-sm-12">
+              <a id="main-content"></a>
+              <div class="region region-content">
+                <article data-history-node-id="6" class="node node--type-page node--view-mode-full clearfix">
+                  <div>
+                    <div class="layout layout--onecol">
+                      <div  class="layout__region layout__region--content">
+                        <div class="block-region-content">
+                          <section class="block block-ctools-block block-entity-fieldnodebody clearfix gcs-section">
+                            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                              <div class="col-sm-6" style="display: flex; align-items: center; min-height: 100%; min-height: 500px;">
+                                <div>
+                                  <!-- Start editing here -->
+                                  <h1>Grand Challenges Summit</h1>
+                                  <!-- End editing here editing here -->
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div id="about" class="gcs-panel panel-about panel-dark">
+        <div class="container">
+          <div class="row">
+            <div class="region region-about">
+              <section class="views-element-container block block-views block-views-blockpage-as-block-block-1 clearfix gcs-section" id="block-views-block-page-as-block-block-1">
+                <h2 class="block-title col-sm-12">About the Summit</h2>
+                <div class="form-group">
+                  <div class="view view-page-as-block view-id-page_as_block view-display-id-block_1 js-view-dom-id-4112164109655dc69b5cb247ed722b14ca1bffa2ecd7dcbb96a3f0c84326f98c">
+                    <div class="view-content">
+                      <div class="views-row">
+                        <div class="views-field views-field-body">
+                          <div class="field-content">
+                            <!-- Begin edits here -->
+                            <p>#mitgrandchallenges</p>
+                            <p> </p>
+                            <p>MIT hosted a working summit on the Grand Challenges in Information Science and Scholarly Communication on March 19-23, 2018. Inviting experts from across disciplines and sectors, the summit aimed to identify critical problems in information science that are solvable within 10 years and which have broad implications across the scholarly community.</p>
+                            <p> </p>
+                            <p>Three consecutive 1.5-day workshops will produce draft research agendas in the areas of:</p>
+                            <ul>
+                              <li>Scholarly discovery</li>
+                              <li>Digital curation and preservation</li>
+                              <li>Open scholarship</li>
+                            </ul>
+                            <p>Attendance at the workshops was by invitation only. The March 19 opening keynote address was open to the MIT community, and all three keynote addresses were live-streamed and available for viewing below.</p>
+                            <!-- End edits here -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="keynotes" class="gcs-panel panel-keynote panel-light">
+        <div class="container">
+          <div class="row">
+            <div class="region region-keynote">
+              <section class="views-element-container block block-views block-views-blockpage-as-block-block-5 clearfix gcs-section" id="block-participating">
+                <h2 class="block-title col-sm-12">Participating</h2>
+                <div class="form-group">
+                  <div class="view view-page-as-block view-id-page_as_block view-display-id-block_5 js-view-dom-id-7355c52aecd7165c21deb78688af2ff5f06b85cd1498dd0b7c6aeed241224c09">
+                    <div class="view-content">
+                      <div class="views-row">
+                        <div class="views-field views-field-body">
+                          <div class="field-content">
+                            <div class="col-xs-12">
+                              <p>We have been openly sharing background readings, survey results, detailed schedules, and information shared by the summit participants through the PubPub platform (hosted by the MIT MediaLab). Interested members of the community can follow along at:</p>
+                              <p><a href="https://grandchallenges.pubpub.org/">https://grandchallenges.pubpub.org/</a></p>
+                            </div>
+                            <h3 class="col-xs-12">Draft report released</h3>
+                            <p class="col-xs-2"><a href="https://grandchallenges.pubpub.org/pub/publicdraft"><img alt="The cover of the GCS report" data-entity-type="file" data-entity-uuid="ccede913-a7e8-45f4-bb54-e720cb8d17b7" src="images/gcs_report_cover_0.png" style="-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);width: 100%;" /></a></p>
+                            <p class="col-xs-10">The Grand Challenges Summit has produced a draft white paper, <a href="https://grandchallenges.pubpub.org/pub/publicdraft">A Grand Challenges-Based Research Agenda for Scholarly Communication and Information Science</a>. The paper is available on PubPub and open for comment through October 31.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="attending" class="gcs-panel panel-attending panel-dark">
+        <div class="container">
+          <div class="row">
+            <div class="region region-attending">
+              <section class="views-element-container block block-views block-views-blockfeatured-speakers-block-1 clearfix gcs-section" id="block-views-block-featured-speakers-block-1-2">
+                <h2 class="block-title col-sm-12">Keynote Speakers</h2>
+                <div class="form-group">
+                  <div class="view view-featured-speakers view-id-featured_speakers view-display-id-block_1 js-view-dom-id-0ec0b0235e901498e12815f3bc2c778227316ca384eae4cf12bf4a3c3f07153a">
+                    <div class="view-content">
+                      <div class="col-sm-4">
+                        <p class="views-field views-field-field-headshot">
+                          <div class="field-content"><img src="images/ito.png" width="467" height="467" alt="headshot of Joi Ito" typeof="foaf:Image" class="img-responsive" /></div>
+                        </p>
+                        <p class="views-field views-field-field-keynote">
+                          <div class="field-content"><div class="embed-responsive embed-responsive-16by9"><iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/u5F__Jqx3Nk?rel=0&amp;showinfo=0" width="560"></iframe></div></div>
+                        </p>
+                        <h3>Joi Ito</h3>
+                        <p class="views-field views-field-body short-bio">Joi Ito is the director of the MIT Media Lab, Professor of the Practice at MIT and the author, with Jeff Howe, of <em>Whiplash: How to Survive Our Faster Future</em> (Grand Central Publishing, 2016).</p>
+                        <p class="full-bio-link"><a href="https://joi.ito.com/bio.html">More about Joi Ito</a></p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="views-field views-field-field-headshot">
+                          <div class="field-content"><img src="images/sengupta.png" width="720" height="720" alt="headshot of Anasuya Sengupta" typeof="foaf:Image" class="img-responsive" /></div>
+                        </p>
+                        <p class="views-field views-field-field-keynote">
+                          <div class="field-content"><div class="embed-responsive embed-responsive-16by9"><iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/bshxssV_3Pc?rel=0&amp;showinfo=0" width="560"></iframe></div></div>
+                        </p>
+                        <h3>Anasuya Sengupta</h3>
+                        <p class="views-field views-field-body short-bio">Anasuya Sengupta is Co-Director of  <a href="http://whoseknowledge.org/">Whose Knowledge?</a>  She has led initiatives in India and the USA, across the global South, and internationally for over 20 years to amplify marginalised voices in virtual and physical worlds.</p>
+                        <p class="full-bio-link"><a href="http://sanmathi.org/anasuya/">More about Anasuya Sengupta</a></p>
+                      </div>
+                      <div class="col-sm-4">
+                        <p class="views-field views-field-field-headshot">
+                          <div class="field-content"><img src="images/20160805SM002_WEB_crop.png" width="720" height="720" alt="Kate Zwaard" typeof="foaf:Image" class="img-responsive" /></div>
+                        </p>
+                        <p class="views-field views-field-field-keynote">
+                          <div class="field-content"><div class="embed-responsive embed-responsive-16by9"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PyCWFZ1gtb0?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div></div>
+                        </p>
+                        <h3>Kate Zwaard</h3>
+                        <p class="views-field views-field-body short-bio">Kate Zwaard is the chief of <a href="http://digitalpreservation.gov/ndi/index.html?loclr=blogsig">National Digital Initiatives</a> at the Library of Congress, where she leads a new group focused on digital innovation and expanding the use of the digital collections. She previously managed the Digital Repository Development team, contributing leadership, code and a passion for the mission of the agency. Under her technical direction, the Library of Congress ingested three petabytes (equivalent to 3 million gigabytes) of digital collections, including web archives, the first born-digital manuscript collections, 10 million Chronicling America newspaper pages and three-fourths of a trillion tweets.</p>
+                        <p class="full-bio-link"><a href="https://blogs.loc.gov/thesignal/author/kzwa/">More about Kate Zwaard</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="committee" class="gcs-panel panel-committee panel-light">
+        <div class="container">
+          <div class="row">
+            <div class="region region-committee">
+              <section class="views-element-container block block-views block-views-blockprogram-committee-block-1 clearfix gcs-section" id="block-views-block-program-committee-block-1">
+                <h2 class="block-title col-sm-12">Program Committee</h2>
+                  <div class="form-group">
+                    <div class="view view-program-committee view-id-program_committee view-display-id-block_1 js-view-dom-id-1c7085611ea3b6f1ae232a79ff86a3a47299025590c66beea6f432b3454670ac">
+                      <div class="view-header">
+                        <p class="col-xs-12" style="padding-bottom: 15px;">The Program Committee is providing intellectual guidance throughout the process of developing and hosting the Grand Challenges Summit. Specifically, the committee has advised on the selection of participants, identified foundational publications to be incorporated into the briefs, and written position papers. We anticipate committee members will participate in workshop discussions and in commenting on and identifying reviewers for versions of the resulting report.</p>
+                      </div>
+                      <div class="view-content">
+                        <div class="col-sm-3">
+                          <div class="views-field views-field-field-headshot"><div class="field-content"><img src="images/altman.png" width="494" height="495" alt="headshot of Micah Altman" typeof="foaf:Image" class="img-responsive" /></div></div>
+                          <h3>Micah Altman</h3>
+                          <div class="views-field views-field-body"><div class="field-content"><p>Micah Altman is Director of Research and Head/Scientist, Program on Information Science for the MIT Libraries, at the Massachusetts Institute of Technology.</p></div></div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="views-field views-field-field-headshot"><div class="field-content"><img src="images/borgman.png" width="525" height="525" alt="headshot of Chris Borgman" typeof="foaf:Image" class="img-responsive" /></div></div>
+                          <h3>Christine Borgman</h3>
+                          <div class="views-field views-field-body"><div class="field-content"><p>Christine L. Borgman is Distinguished Professor and Presidential Chair in Information Studies at UCLA.</p></div></div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="views-field views-field-field-headshot"><div class="field-content"><img src="images/bourg.png" width="525" height="525" alt="headshot of Chris Bourg" typeof="foaf:Image" class="img-responsive" /></div></div>
+                          <h3>Chris Bourg</h3>
+                          <div class="views-field views-field-body"><div class="field-content"><p>Chris Bourg is the Director of Libraries at Massachusetts Institute of Technology (MIT), where she also has oversight of the MIT Press.</p></div></div>
+                        </div>
+                        <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="images/choudhury_alt1.png" width="274" height="274" alt="headshot of G. Sayeed Choudhury" typeof="foaf:Image" class="img-responsive" /></div></div><h3>G. Sayeed Choudhury</h3><div class="views-field views-field-body"><div class="field-content"><p>G. Sayeed Choudhury is the Associate Dean for Research Data Management and Hodson Director of the Digital Research and Curation Center at the Sheridan Libraries of Johns Hopkins University. He is a President Obama appointee to the National Museum and Library Services Board.</p></div></div></div>
+                        <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="images/henry.png" width="525" height="525" alt="headshot of Charles (Chuck) Henry" typeof="foaf:Image" class="img-responsive" /></div></div><h3>Charles (Chuck) Henry</h3><div class="views-field views-field-body"><div class="field-content"><p>Charles J. Henry is President of the Council on Library and Information Resources (CLIR).</p></div></div></div>
+                        <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="images/rumsey.png" width="525" height="525" alt="headshot of Abby Smith Rumsey" typeof="foaf:Image" class="img-responsive" /></div></div><h3>Abby Smith Rumsey</h3><div class="views-field views-field-body"><div class="field-content"><p>Abby Smith Rumsey is a writer and historian of ideas focusing on the creation, preservation, and use of the cultural record in all media.</p></div></div></div>
+                        <div class="col-sm-3"><div class="views-field views-field-field-headshot"><div class="field-content">  <img src="images/zuckerman.png" width="525" height="525" alt="headshot of Ethan Zuckerman" typeof="foaf:Image" class="img-responsive" /></div></div><h3>Ethan Zuckerman</h3><div class="views-field views-field-body"><div class="field-content"><p>Ethan Zuckerman is director of the Center for Civic Media at MIT, and Associate Professor of the Practice at MIT's Media Lab.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="updates" class="gcs-panel panel-updates panel-bg-fixed">
+        <div class="gcs-content container">
+          <div class="row">
+            <div class="region region-updates">
+              <section id="block-dynamicupdates" class="block block-block-content block-block-contentef76c2ae-852b-409b-b21a-80a7546e2c3d clearfix gcs-section">
+                <h2 class="block-title col-sm-12">Updates</h2>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer" role="contentinfo">
+        <div class="footer-foundation panel-light">
+          <div class="container">
+            <div class="row">
+              <div class="region region-foundation">
+                <section id="block-foundation" class="block block-block-content block-block-contente0663f55-d634-44bb-a7b9-33d66ea975b4 clearfix gcs-section">
+                  <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                    <div class="col-md-8">
+                      <h4 style="margin-top: 0;">The Grand Challenges Summit is funded with the generous support<br />of The Andrew W. Mellon Foundation.</h4>
+                    </div>
+                    <div class="col-md-3">
+                      <div><a class="logo" href="https://mellon.org/"><svg enable-background="new 0 0 270 127" height="143" version="1.1" viewbox="0 0 270 127" width="265" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"><g><path d="M45.8,93.8h-6.9V56.4h-0.1L24,75h-1.1L8,56.4H7.9v37.4H1v-48h6.5l15.9,19.7l16-19.7h6.4V93.8z" fill="#232325"></path><path d="M83.4,52H63v14.5h19.6v6.2H63v14.9h21v6.2H56.1v-48h27.3V52z" fill="#232325"></path><path d="M99.9,87.6h21.7v6.2H93v-48h6.9V87.6z" fill="#232325"></path><path d="M138,87.6h21.7v6.2h-28.6v-48h6.9V87.6z" fill="#232325"></path><path d="M189.3,45.1c15.8,0,25.8,11.3,25.8,24.6c0,13-9.7,24.6-26,24.6c-15.7,0-25.6-11.6-25.6-24.6C163.5,56.5,173.7,45.1,189.3,45.1z M189.3,88.1c10.8,0,18.7-7.8,18.7-18.3c0-10.6-8-18.3-18.7-18.3c-10.7,0-18.7,7.7-18.7,18.3C170.6,80.3,178.6,88.1,189.3,88.1z" fill="#232325"></path><path d="M268,93.8h-5.9l-32.1-37v37h-6.5v-48h5.5L261.6,83V45.8h6.5V93.8z" fill="#232325"></path></g><g><path d="M9.1,4H5.8v8.3H4.4V4H1.1V2.8h8V4z" fill="#5E5F5F"></path><path d="M18.6,12.3h-1.4V8.2h-5.4v4.2h-1.4V2.8h1.4v4.2h5.4V2.8h1.4V12.3z" fill="#5E5F5F"></path><path d="M26.3,4h-4v2.9h3.9v1.2h-3.9v3h4.2v1.2h-5.5V2.8h5.4V4z" fill="#5E5F5F"></path><path d="M10.2,30.3H8.8l-1.3-2.8H3.5l-1.2,2.8H0.9L5,20.7h1L10.2,30.3z M4,26.3h3l-1.5-3.5L4,26.3z" fill="#5E5F5F"></path><path d="M20.2,30.3h-1.2L12.7,23v7.4h-1.3v-9.6h1.1l6.5,7.4v-7.4h1.3V30.3z" fill="#5E5F5F"></path><path d="M22.5,20.8h3.7c3.5,0,5.1,2.5,5.1,4.8c0,2.5-1.9,4.8-5.1,4.8h-3.7V20.8z M23.9,29.1H26c3.1,0,3.8-2.4,3.8-3.5c0-1.9-1.2-3.5-3.9-3.5h-2.1V29.1z" fill="#5E5F5F"></path><path d="M35.5,20.8c1.9,0,3.1,1,3.1,2.7c0,1.1-0.6,1.9-1.6,2.3c0.9,0.6,1.4,1.5,2.1,2.6c0.4,0.7,0.6,1,1.3,1.9h-1.6l-1.3-2c-1.3-2-1.8-2.2-2.5-2.2h-0.6v4.1h-1.4v-9.6H35.5z M34.5,24.9h0.9c1.5,0,1.9-0.8,1.9-1.6c0-0.9-0.5-1.4-1.9-1.4h-0.9V24.9z" fill="#5E5F5F"></path><path d="M47.1,22h-4v2.9H47v1.2h-3.9v3h4.2v1.2h-5.5v-9.6h5.4V22z" fill="#5E5F5F"></path><path d="M58.5,30.4h-0.3l-3.1-7.8l-3.2,7.8h-0.3l-3.9-9.6h1.4l2.6,6.6l2.6-6.6h1.3l2.7,6.6l2.6-6.6h1.4L58.5,30.4z" fill="#5E5F5F"></path><path d="M79.5,30.4h-0.3l-3.1-7.8L73,30.4h-0.3l-3.9-9.6h1.4l2.6,6.6l2.6-6.6h1.3l2.7,6.6l2.6-6.6h1.4L79.5,30.4z" fill="#5E5F5F"></path><path d="M84.1,29.6c0,0.5-0.4,0.8-0.8,0.8s-0.8-0.4-0.8-0.8c0-0.5,0.4-0.8,0.8-0.8S84.1,29.2,84.1,29.6z" fill="#5E5F5F"></path></g><polygon fill="#EF4B4B" points="39.3,45.7 45.8,45.7 45.8,47.9 24.1,75 22.8,75 19.3,70.6 "></polygon><g><path d="M144.2,112.3h-5.3v3.8h5.3v1.8h-5.3v6.3h-2v-13.6h7.3V112.3z" fill="#232325"></path><path d="M153.7,110.4c4.5,0,7.3,3.2,7.3,7c0,3.7-2.8,7-7.4,7c-4.5,0-7.3-3.3-7.3-7C146.4,113.6,149.3,110.4,153.7,110.4z M153.7,122.6c3.1,0,5.3-2.2,5.3-5.2c0-3-2.3-5.2-5.3-5.2c-3,0-5.3,2.2-5.3,5.2C148.4,120.4,150.6,122.6,153.7,122.6z" fill="#232325"></path><path d="M175.3,118.8c0,3.3-2,5.5-6.1,5.5c-2.9,0-5.7-1.6-5.7-5.3v-8.5h2v8.1c0,1.5,0.2,2.2,0.8,2.8c0.8,0.8,1.8,1.2,2.9,1.2c1.5,0,2.6-0.5,3.2-1.1c0.7-0.7,0.9-1.7,0.9-3v-7.9h2V118.8z" fill="#232325"></path><path d="M191,124.2h-1.7l-9.1-10.5v10.5h-1.8v-13.6h1.6l9.2,10.6v-10.6h1.8V124.2z" fill="#232325"></path><path d="M194.5,110.6h5.3c5,0,7.3,3.6,7.3,6.8c0,3.5-2.7,6.8-7.2,6.8h-5.3V110.6z M196.5,122.4h3.1c4.4,0,5.5-3.4,5.5-5.1c0-2.7-1.7-5.1-5.6-5.1h-3V122.4z" fill="#232325"></path><path d="M220.8,124.2h-2l-1.8-4h-5.8l-1.7,4h-2l5.9-13.7h1.4L220.8,124.2z M211.9,118.4h4.2l-2.2-4.9L211.9,118.4z" fill="#232325"></path><path d="M231,112.3h-4.7v11.9h-2v-11.9h-4.7v-1.8H231V112.3z" fill="#232325"></path><path d="M235.3,124.2h-2v-13.6h2V124.2z" fill="#232325"></path><path d="M245.5,110.4c4.5,0,7.3,3.2,7.3,7c0,3.7-2.8,7-7.4,7c-4.5,0-7.3-3.3-7.3-7C238.2,113.6,241.1,110.4,245.5,110.4z M245.5,122.6c3.1,0,5.3-2.2,5.3-5.2c0-3-2.3-5.2-5.3-5.2c-3,0-5.3,2.2-5.3,5.2C240.2,120.4,242.5,122.6,245.5,122.6z" fill="#232325"></path><path d="M268.3,124.2h-1.7l-9.1-10.5v10.5h-1.8v-13.6h1.6l9.2,10.6v-10.6h1.8V124.2z" fill="#232325"></path></g></svg></a></div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-colophon panel-dark">
+          <div class="container">
+            <div class="row">
+              <div class="region region-colophon">
+                <section id="block-colophon" class="block block-block-content block-block-content74be683b-c58f-4a5b-b2bd-d1b763837f87 clearfix gcs-section">
+                  <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                    <div class="col-md-2 col-sm-6 col-xs-12"><a class="logo" href="https://libraries.mit.edu"><svg height="65" style="fill-opacity:1; color-rendering:auto; color-interpolation:auto; text-rendering:auto; stroke:black; stroke-linecap:square; stroke-miterlimit:10; shape-rendering:auto; stroke-opacity:1; fill:none; stroke-dasharray:none; font-weight:normal; stroke-width:1; font-family:'Dialog'; font-style:normal; stroke-linejoin:miter; font-size:12px; stroke-dashoffset:0; image-rendering:auto;" width="162" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><!--Generated by the Batik Graphics2D SVG Generator--><defs id="genericDefs"></defs><g><g style="stroke-linecap:round;"><rect height="500" style="stroke:none;" width="500" x="0" y="0"></rect></g><g style="fill:white; stroke-width:0.75; stroke-linecap:round; stroke:white;" transform="translate(0,0) scale(0.8333,0.8333)"><path d="M0 0 L11.9 0 L16.25 15.65 C16.4167 16.2167 16.61 16.9567 16.83 17.87 C17.05 18.7833 17.2733 19.6733 17.5 20.54 C17.7667 21.5733 18.0333 22.6567 18.3 23.79 L18.4 23.79 C18.6333 22.6567 18.8833 21.5733 19.15 20.54 C19.35 19.6733 19.5667 18.7833 19.8 17.87 C20.0333 16.9567 20.2333 16.2167 20.4 15.65 L24.8 0 L36.8 0 L36.8 35.75 L28.7 35.75 L28.7 16 C28.7 15.22 28.7 14.43 28.7 13.63 C28.7 12.6967 28.7333 11.68 28.8 10.58 L28.7 10.58 C28.4333 11.6133 28.2 12.5633 28 13.43 C27.8 14.2967 27.6233 15.0367 27.47 15.65 C27.2833 16.37 27.1433 16.8967 27.05 17.23 L22 35.75 L14.7 35.75 L9.55 17.3 C9.45 16.9667 9.3 16.4333 9.1 15.7 C8.9 14.9667 8.7167 14.2167 8.55 13.45 C8.35 12.5833 8.1333 11.6333 7.9 10.6 L7.8 10.6 C7.8 11.7 7.8 12.7167 7.8 13.65 C7.8 14.45 7.8267 15.25 7.88 16.05 C7.9333 16.85 7.9733 17.4333 8 17.8 L8 35.8 L0 35.8 ZM40 0 L48.85 0 L48.85 35.75 L40 35.75 ZM62.1 7.5 L51.7 7.5 L51.7 0 L81.45 0 L81.45 7.5 L70.95 7.5 L70.95 35.75 L62.1 35.75 ZM0 41 L8.85 41 L8.85 69.25 L25.52 69.25 L25.52 76.75 L0 76.75 ZM28.7 41 L36.85 41 L36.85 47.6 L28.7 47.6 ZM28.7 51.15 L36.85 51.15 L36.85 76.75 L28.7 76.75 ZM55.7 77.55 C54.1252 77.5857 52.5647 77.2427 51.15 76.55 C49.8207 75.8735 48.7107 74.8329 47.95 73.55 L47.85 73.55 L47.85 76.8 L40 76.8 L40 41 L48.15 41 L48.15 54 L48.3 54 C49.0761 52.9212 50.0712 52.0182 51.22 51.35 C52.566 50.6359 54.0774 50.2908 55.6 50.35 C57.1679 50.3195 58.7207 50.6623 60.13 51.35 C61.4775 52.0318 62.6561 53.0054 63.58 54.2 C64.567 55.4887 65.3124 56.9456 65.78 58.5 C66.3278 60.2811 66.5944 62.1367 66.57 64 C66.5954 65.9348 66.3325 67.8626 65.79 69.72 C65.3438 71.2749 64.6 72.7285 63.6 74 C62.6735 75.1463 61.4921 76.0606 60.15 76.67 C58.7378 77.2834 57.2093 77.5837 55.67 77.55 ZM53.4 71.1 C54.8542 71.1346 56.2239 70.4003 57 69.17 C57.9323 67.5763 58.3774 65.7438 58.28 63.9 C58.3666 62.0477 57.9224 60.2086 57 58.6 C56.2035 57.2971 54.7554 56.5289 53.23 56.6 C51.6157 56.5187 50.0798 57.3251 49.23 58.7 C48.2929 60.3038 47.838 62.1443 47.92 64 C47.8342 65.8342 48.3429 67.6479 49.37 69.17 C50.294 70.4426 51.7988 71.1687 53.37 71.1 ZM68.51 51.15 L76.31 51.15 L76.31 55.15 L76.46 55.15 C77.1816 53.8123 78.2097 52.6642 79.46 51.8 C80.6692 51.0888 82.0584 50.7415 83.46 50.8 C84.0011 50.7678 84.5435 50.8356 85.06 51 L85.06 58 L84.86 58 C82.7716 57.5305 80.579 57.9946 78.86 59.27 C77.3733 60.49 76.63 62.49 76.63 65.27 L76.63 76.77 L68.51 76.77 ZM94.51 77.4 C93.315 77.41 92.1252 77.2415 90.98 76.9 C89.9614 76.6006 89.0174 76.0894 88.21 75.4 C87.4255 74.7447 86.794 73.9254 86.36 73 C85.9082 71.9421 85.6866 70.8001 85.71 69.65 C85.6712 68.4299 85.9394 67.2195 86.49 66.13 C87.0007 65.1869 87.7314 64.3807 88.62 63.78 C89.5787 63.1388 90.6361 62.6591 91.75 62.36 C92.9862 62.0163 94.2464 61.7656 95.52 61.61 C97.2167 61.4504 98.8924 61.1153 100.52 60.61 C101.3991 60.4033 102.0193 59.6029 102 58.7 C102.0314 57.9441 101.7274 57.2116 101.17 56.7 C100.3972 56.1532 99.4519 55.9044 98.51 56 C97.4405 55.9123 96.3745 56.2143 95.51 56.85 C94.8103 57.4819 94.3803 58.3598 94.31 59.3 L86.81 59.3 C86.8373 58.1234 87.1098 56.9653 87.61 55.9 C88.1246 54.7772 88.8871 53.7856 89.84 53 C90.8994 52.1415 92.1152 51.4962 93.42 51.1 C95.0403 50.609 96.7271 50.3729 98.42 50.4 C100.0687 50.3667 101.715 50.5414 103.32 50.92 C104.545 51.2213 105.6998 51.7579 106.72 52.5 C107.7922 53.2607 108.6388 54.2975 109.17 55.5 C109.7251 56.8468 109.9974 58.2935 109.97 59.75 L109.97 72.65 C109.9511 73.4602 110.008 74.2704 110.14 75.07 C110.2006 75.5638 110.4656 76.0102 110.87 76.3 L110.87 76.65 L103 76.65 C102.7662 76.3104 102.5967 75.9308 102.5 75.53 C102.349 74.9642 102.2322 74.3898 102.15 73.81 L102.05 73.81 C101.2869 74.8743 100.2873 75.7472 99.13 76.36 C97.6816 77.0824 96.0781 77.4395 94.46 77.4 ZM97.11 72.2 C98.4418 72.2637 99.7518 71.8366 100.79 71 C101.7433 70.1549 102.2656 68.9228 102.21 67.65 L102.21 64.65 C101.6085 64.9458 100.9829 65.19 100.34 65.38 C99.62 65.6 98.8433 65.81 98.01 66.01 C96.8113 66.232 95.6606 66.6618 94.61 67.28 C93.9076 67.7713 93.5093 68.5943 93.56 69.45 C93.4772 70.3081 93.859 71.1481 94.56 71.65 C95.3224 72.0714 96.1911 72.2625 97.06 72.2 ZM112.98 51.2 L120.78 51.2 L120.78 55.2 L120.93 55.2 C121.6516 53.8623 122.6797 52.7142 123.93 51.85 C125.1392 51.1388 126.5284 50.7915 127.93 50.85 C128.4711 50.8178 129.0135 50.8856 129.53 51.05 L129.53 58.05 L129.33 58.05 C127.2417 57.5805 125.049 58.0446 123.33 59.32 C121.8433 60.54 121.1 62.54 121.1 65.32 L121.1 76.82 L112.95 76.82 ZM131.88 41 L140 41 L140 47.6 L131.85 47.6 ZM131.88 51.15 L140 51.15 L140 76.75 L131.85 76.75 ZM155.88 77.5 C153.9335 77.5358 151.9981 77.1962 150.18 76.5 C148.5587 75.8699 147.092 74.8978 145.88 73.65 C144.6955 72.4049 143.7768 70.9316 143.18 69.32 C142.5185 67.5965 142.1796 65.766 142.18 63.92 C142.1804 62.0968 142.5195 60.2894 143.18 58.59 C143.7816 56.9897 144.7 55.5271 145.88 54.29 C147.0443 53.0637 148.4462 52.0872 150 51.42 C153.2916 50.1182 156.9471 50.0577 160.28 51.25 C161.6903 51.7911 162.9888 52.5878 164.11 53.6 C165.6797 55.061 166.856 56.8943 167.53 58.93 C168.2935 61.2069 168.6555 63.5992 168.6 66 L150.2 66 C150.3697 67.5175 150.9977 68.948 152 70.1 C153.052 71.1561 154.513 71.7039 156 71.6 C156.9058 71.6492 157.8073 71.4412 158.6 71 C159.3044 70.5464 159.8608 69.8961 160.2 69.13 L168.2 69.13 C167.9206 70.3267 167.4111 71.4577 166.7 72.46 C165.943 73.5349 164.9937 74.4605 163.9 75.19 C162.8113 75.9667 161.6016 76.558 160.32 76.94 C158.866 77.3474 157.3595 77.5361 155.85 77.5 ZM160.38 61.2 C160.292 59.8431 159.7452 58.5556 158.83 57.55 C157.9709 56.6539 156.7708 56.1629 155.53 56.2 C154.1923 56.111 152.8793 56.6034 151.93 57.55 C151.0363 58.5799 150.4627 59.8487 150.28 61.2 ZM182.28 77.55 C178.5133 77.55 175.53 76.7433 173.33 75.13 C171.1715 73.5903 169.8706 71.1111 169.83 68.46 L177.53 68.46 C177.6132 69.5651 178.1357 70.5921 178.98 71.31 C179.9165 72.0059 181.0643 72.3591 182.23 72.31 C183.244 72.3606 184.2532 72.136 185.15 71.66 C185.8378 71.2809 186.2561 70.5449 186.23 69.76 C186.2484 69.2464 186.0484 68.7483 185.68 68.39 C185.2609 68.0091 184.7671 67.7196 184.23 67.54 C183.5547 67.3057 182.858 67.1383 182.15 67.04 C181.37 66.9267 180.5633 66.7867 179.73 66.62 C178.63 66.42 177.53 66.18 176.43 65.9 C175.3674 65.6382 174.3543 65.2059 173.43 64.62 C172.5458 64.0512 171.8171 63.2709 171.31 62.35 C170.7326 61.2122 170.4571 59.9449 170.51 58.67 C170.4883 57.4302 170.7917 56.2061 171.39 55.12 C171.9723 54.087 172.7872 53.2036 173.77 52.54 C174.8481 51.823 176.0425 51.2985 177.3 50.99 C178.6988 50.6357 180.1371 50.461 181.58 50.47 C185.2133 50.47 187.9967 51.2033 189.93 52.67 C191.8347 54.0937 193.0088 56.2951 193.13 58.67 L185.63 58.67 C185.5905 57.7137 185.0956 56.832 184.3 56.3 C183.4442 55.852 182.485 55.638 181.52 55.68 C180.6442 55.6536 179.7762 55.8534 179 56.26 C178.3502 56.608 177.9592 57.304 178 58.04 C177.9809 58.4652 178.1671 58.8748 178.5 59.14 C178.906 59.4427 179.3634 59.6697 179.85 59.81 C180.5048 60.016 181.173 60.1764 181.85 60.29 L184.18 60.69 C185.3133 60.89 186.4533 61.1333 187.6 61.42 C188.7151 61.6898 189.779 62.139 190.75 62.75 C191.6706 63.3415 192.441 64.1393 193 65.08 C193.6536 66.3083 193.9645 67.6902 193.9 69.08 C193.9742 71.6226 192.7234 74.0295 190.6 75.43 C189.4682 76.1727 188.2163 76.714 186.9 77.03 C185.3745 77.3976 183.809 77.5723 182.24 77.55 Z" style="stroke:none;"></path></g></g></svg></a></div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">We envision a world where enduring, abundant, equitable, and meaningful access to information serves to empower and inspire humanity.</div>
+                    <div class="clearfix visible-sm"> </div>
+                    <div class="social-icon"><a class="col-md-1 col-sm-2 col-xs-3" href="https://twitter.com/mitlibraries"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on Twitter</span></a></div>
+                    <div class="social-icon"><a class="col-md-1 col-sm-2 col-xs-3" href="https://libraries.mit.edu/facebook"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on Facebook</span></a></div>
+                    <div class="social-icon"><a class="col-md-1 col-sm-2 col-xs-3" href="https://instagram.com/mitlibraries/"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on Instagram</span></a></div>
+                    <div class="social-icon"><a class="col-md-1 col-sm-2 col-xs-3" href="https://www.youtube.com/user/mitlibraries"><i class="fab fa-youtube fa-2x" aria-hidden="true"></i><span class="sr-only">MIT Libraries on YouTube</span></a></div>
+                    <div class="col-md-2 col-sm-4 col-xs-12"><a href="https://web.mit.edu"><svg class="logo-mit" enable-background="new 0 0 54 28" height="65" style="fill: #b9b7b6; float: right;" version="1.1" viewbox="0 0 54 28" width="126" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0"><rect class="color" height="19.1" style="fill: white;" width="5.8" x="28.9" y="8.9"></rect><rect height="28" width="5.8"></rect><rect height="18.8" width="5.8" x="9.6"></rect><rect height="28" width="5.8" x="19.3"></rect><rect height="19.1" width="5.8" x="38.5" y="8.9"></rect><rect height="5.6" width="15.2" x="38.8"></rect><rect height="5.6" width="5.8" x="28.9"></rect></svg></a></div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9021ea6c03/3efe2d8bfc50c0bde9b1a09aa.js");</script>
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/6","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":2,"trackCrossDomains":["http:\/\/grandchallenges.mit.edu","live-grandchallengessummit.pantheonsite.io"],"trackUrlFragments":true},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_keyboard":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","popover_trigger_autoclose":1,"tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"3179fb7df63e8003f90331a423959974491a3faf94344280da260fcaa144f0e3"}}</script>
+  <script src="scripts1.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.1/js/v4-shims.js"></script>
+  <script src="scripts2.js?v=1.0.0-beta"></script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"1815917de0","applicationID":"110379387","transactionName":"ZlBbYkpWWxJQVBFZXl8aeFVMXloPHkcEV1RuVlhVUFI=","queueTime":0,"applicationTime":9,"atts":"ShdYFAJMSBw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
